@@ -1,0 +1,78 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+    <app-dashboard></app-dashboard>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+              <div class="align-items-center set_margin_top">
+                  <h5>Update Employee</h5>
+              </div>
+              <div class="alert alert-danger" *ngIf="errorMessage">
+                 {{errorMessage}}
+               </div>
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-7">
+                        <div class="box">
+                            <div class="float">
+                                <form [formGroup]="employeeUpdateForm">
+                                  <div class="form-group input-group">
+                                    <label for="Employee Id" class="col-md-4 col-form-label"> Employee Id</label>
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                          </div>
+                                          <input class="form-control" type="text" name="emp_id" id="emp_id"  disabled="" placeholder="Enter Empployee Id" formControlName="empId">
+                                  </div>
+                                  <div class="form-group input-group">
+                                    <label for="Employee Name" class="col-md-4 col-form-label"> Employee Name</label>
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                          </div>
+                                          <input class="form-control" type="text" name="emp_name" id="emp_name"  placeholder="Enter Employee Name" formControlName="empName">
+                                  </div>
+                                  <div class="form-group input-group">
+                                    <label for="Employee Login" class="col-md-4 col-form-label"> Employee Login</label>
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                          </div>
+                                          <input class="form-control" type="text" name="emp_login" id="emp_login"  placeholder="Enter Employee Login" formControlName="empLogin">
+                                  </div>
+                                  <div class="form-group input-group">
+                                    <label for="Salary" class="col-md-4 col-form-label"> Salary</label>
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                          </div>
+                                          <input class="form-control" type="text" name="salary" id="salary"  placeholder="Enter Salary" formControlName="salary">
+                                  </div>
+
+                                  <div class="form-group input-group">
+                                    <label for="startdate" class="col-md-4 col-form-label">Start Date</label>
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                          </div>
+                                          <input type="date" class="form-control" id="startdate" placeholder="Start Date" formControlName="startdate" data-date-format="dd-mm-yyyy">
+                                  </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-4"></div>
+                                            <button type="button" class="col-md-8 btn btn-primary btn-block login-button" (click)="employeeUpdate()">Update Board</button>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-4"></div>
+                                            <button type="button" class="col-md-8 btn btn-warning btn-block" [routerLink]="['/dashboard/employee/list']">Cancel</button>
+                                        </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+    </div>
+</div>

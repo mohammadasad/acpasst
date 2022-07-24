@@ -1,0 +1,10 @@
+a.btn {
+  border-radius: .25rem;
+   border: 1px solid transparent;
+   padding: .3rem .5rem;
+   font-weight:500;
+    color: #fff !important;
+  }
+a.btn:hover {
+   color:white;}
+  

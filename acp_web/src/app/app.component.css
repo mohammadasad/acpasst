@@ -1,0 +1,9 @@
+.set-outlet{
+  min-height:38rem;
+
+}
+.banner{
+	  background: url('../assets/img/load-pic.png') no-repeat center top;
+    background-size: cover;
+    position: relative;
+}

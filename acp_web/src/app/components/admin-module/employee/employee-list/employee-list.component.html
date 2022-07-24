@@ -1,0 +1,89 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+	<app-dashboard></app-dashboard>
+
+	<!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="align-items-center set_margin_top">
+                    <h5>Employee Details</h5>
+                </div>
+                <div class="alert alert-danger" *ngIf="errorMessage">
+                  {{errorMessage}}
+                </div>
+
+                <a class="btn btn-info btn-sm" routerLink="/dashboard/employee/create" routerLinkActive="active">Create Employee</a>
+
+                <a class="btn btn-primary btn-sm" (click)="editEmployee()">Edit Employee</a>
+
+
+                <a class="btn btn-danger btn-sm" (click)="deleteEmployee()">Delete Employee</a>
+
+								<a class="btn btn-success btn-sm" routerLink="/dashboard/employee/upload">Upload Employee</a>
+                <br><br>
+	<div class="form-inline">
+								<form [formGroup]="searchEmployeeForm">
+  <input class="form-control" type="text" name="min_salary" id="min_salary"  placeholder="Enter Min Salary" formControlName="minSalary">
+	<input class="form-control" type="text" name="max_salary" id="max_salary"  placeholder="Enter Max Salary" formControlName="maxSalary">
+	<input class="form-control" type="text" name="offset" id="offset"  placeholder="Enter Offset" formControlName="offset">
+	<input class="form-control" type="text" name="limit" id="limit"  placeholder="Enter limit" formControlName="limit">
+	<button type="button" class="form-control btn btn-primary btn-block login-button" (click)="searchEmployee()">Search Employee</button>
+								</form>
+</div>
+<br><br>
+                <table id="datatable" class="table table-striped">
+				    <thead>
+				        <tr>
+                            <th></th>
+				                    <th>Id</th>
+                            <th>Login</th>
+				                    <th>Name</th>
+                            <th>Salary</th>
+														<th>Start Date</th>
+				        </tr>
+				    </thead>
+				    <tbody>
+				        <tr *ngFor="let employee of employees">
+                            <td>
+                                <input type="checkbox" name="selected_checkbox" [(ngModel)]="employee.isSelect" (change)="selectEmployee($event, employee)">
+                            </td>
+				            <td>{{employee.id}}</td>
+										<td>{{employee.name}}</td>
+										<td>{{employee.login}}</td>
+										<td>{{employee.salary}}</td>
+										<td>{{employee.startDate}}</td>
+				        </tr>
+				    </tbody>
+				</table>
+
+                <!-- Content Row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <!-- <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Your Website 2019</span>
+                </div>
+            </div>
+        </footer> -->
+        <!-- End of Footer -->
+    </div>
+    <!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>

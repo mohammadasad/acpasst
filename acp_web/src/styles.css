@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import "~bootstrap/dist/css/bootstrap.css";*/
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.css";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.growaaj-bg-color {
+	/*background-color: rgb(42,63,84);*/
+  background-color: rgb(184,29,80);
+}
+
+.danger  {
+	color: #a94442;
+}
+
+.success {
+	color: #00ff00;
+}
+.set_margin_top{
+  margin:4rem 0 1rem 0;
+  text-align: center;
+}
+label{
+ font-family:Roboto,sans-serif !important;
+  margin-bottom: 0rem !important;
+}
+pre{
+  text-align: left;
+  margin-bottom:0rem !important;
+}
+.form-group{
+  margin:1rem 0 0 0 !important;
+}
+.text_center{
+  text-align:center;
+}
+.table td, .table th{
+ padding:0.30rem 0 .30rem .15rem !important;
+ }
+.table th{
+background-color: rgb(234,243,254);
+font-size:small;
+}
+.table td{
+font-size:small;
+font-weight:500;
+}
+
+.cpointer{
+  cursor:pointer;
+}
+#content {
+    min-height:38rem;
+}
+.set_margin_popup{
+  margin:8rem 0 1rem 0;
+  text-align: center;
+}
+.form-group label{
+  text-align: left;
+}
+.majanta-color{
+  background-color:rgb(184,29,80);
+}
+.bg-orange{
+  background-color:rgb(247,170,84);
+}
+.bg-yellow{
+    /* background-color:rgb(254,198,1); */
+    background-color:rgb(241,187,1);
+}
+.bg-dyellow{
+    background-color:rgb(245,114,7);
+}

@@ -1,0 +1,28 @@
+.navbar-nav{
+    position: fixed !important;
+    left: 0px; /* the key here is to make left and right '0px' */
+    right: 0px;
+    margin-top:45px;
+    background:rgb(159,45,104);
+    /* width:200px !important; */
+    /*overflow-y:scroll !important;*/
+}
+.content-container{ /* change this to be the container of your content */
+    margin-top: 57px /* 57px is just the height of your navbar */
+}
+@media (min-width: 768px){
+.sidebar .nav-item .nav-link span {
+    display: inline;
+    font-family:Roboto,sans-serif;
+    font-size: .9rem;
+    font-weight:400px !important
+}
+.sidebar .nav-item .nav-link{
+    border-bottom: 1px solid rgba(36,45,58,.5) !important;
+    box-shadow: 0 1px 0 0 hsla(0,0%,100%,.1);
+    max-width:12rem !important;
+}
+}
+.sidebar{
+  max-width:12rem !important;
+}
